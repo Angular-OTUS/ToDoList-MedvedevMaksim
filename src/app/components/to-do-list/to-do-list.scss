@@ -1,0 +1,45 @@
+:host {
+  width: 600px;
+  border-radius: var(--rounded-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--background-secondary);
+  padding: 24px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.todo-list {
+  &__item {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    &-title {
+      max-width: 80%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__item:has(+ li) {
+    border-bottom: var(--background) solid 2px;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    & input {
+      flex: 1 1 0%;
+    }
+  }
+}
