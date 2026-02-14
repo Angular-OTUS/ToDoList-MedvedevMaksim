@@ -15,24 +15,6 @@
 }
 
 .todo-list {
-  &__item {
-    padding: 16px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
-    &-title {
-      max-width: 80%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  &__item:has(+ li) {
-    border-bottom: var(--background) solid 2px;
-  }
-
   &__search {
     display: flex;
     justify-content: space-between;

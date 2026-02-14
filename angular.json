@@ -10,7 +10,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "path": "src/app/components",
+          "style": "scss",
+          "skipTests": true
         }
       },
       "root": "",
@@ -29,9 +31,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/app/styles/styles.scss"]
           },
           "configurations": {
             "production": {

@@ -1,20 +1,16 @@
 <h1 class="title">Todo List</h1>
 <div class="todo-list__search">
-  <input type="text" placeholder="Enter name of new todo" />
-  <button type="button" data-theme="primary">Add</button>
+  <input
+    [value]="searchValue()"
+    (input)="onSearchChange($event)"
+    type="text"
+    placeholder="Enter name of new todo"
+  />
+  <button class="button button--add" type="button">Add</button>
 </div>
 
 <ul class="todo-list">
-  <li class="todo-list__item">
-    <p class="todo-list__item-title">Todo item №1</p>
-    <button type="button" data-theme="secondary">Delete</button>
-  </li>
-  <li class="todo-list__item">
-    <p class="todo-list__item-title">Todo item №2</p>
-    <button type="button" data-theme="secondary">Delete</button>
-  </li>
-  <li class="todo-list__item">
-    <p class="todo-list__item-title">Todo item №2</p>
-    <button type="button" data-theme="secondary">Delete</button>
-  </li>
+  @for (todo of todos(); track todo.id) {
+  <app-to-do-item [todo]="todo" />
+  }
 </ul>

@@ -1,0 +1,20 @@
+* {
+  font-family: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input {
+  border: none;
+  background: transparent;
+  appearance: none;
+  box-shadow: none;
+  color: inherit;
+}
